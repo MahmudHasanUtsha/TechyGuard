@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;">
+        <h1>ABOUT</h1>
+        <p> Techygaurd  is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology
+          solutions. We aim to drive digital transformation and fortify organizational resilience by offering innovative services that
+          address the evolving challenges of the modern digital landscape.</p>
+        <a href="  {% url 'about' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;">
+        <h1>SERVICES</h1>
+        <p>Quickly detect, contain, and mitigate the impact of cyberattacks to minimize disruption and ensure business continuity. Help businesses secure cardholder data by achieving compliance with the Payment Card Industry Data Security Standard
+          (PCI DSS).</p>
+        <a href=" {% url 'services' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;" >
+        <h1>SOLUTIONS</h1>
+        <p>Safeguard devices against malware and malicious applications while enabling centralized threat investigation and
+          response. Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.</p>
+        <a href=" {% url 'solutions' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+        <h1>CLIENTS</h1>
+        <p>Explore how Techygaurd  has helped organizations achieve robust cybersecurity through tailored solutions and expert
+          support.</p>
+        <a href=" {% url 'clients' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption"  style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+        <h1>PARTNERS</h1>
+        <p>We collaborate with industry‐leading OEMs, distributors, and technology providers to deliver reliable and cutting‐edge
+          solutions.</p>
+        <a href=" {% url 'partners' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="carousel-item" style="background: red;">
+      <div class="overlay"></div>
+      <div class="carousel-caption"   style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+        <h1>GALLERY</h1>
+        <p> Discover highlights from our client meetings, training sessions, and internal events, showcasing our commitment to
+          excellence.</p>
+        <a href=" {% url 'gallery' %} " class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+{% endblock %}

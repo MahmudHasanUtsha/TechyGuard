@@ -1,0 +1,103 @@
+/* General navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343A40; /* Your desired color */
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between each navbar link */
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px; /* Adds space between the "Sign In" and "Sign Up" */
+}
+
+.navbar-link, .navbar-title, .navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left, .navbar-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-link {
+        font-size: 18px;
+    }
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    font-size: 22px;
+}
+
+/* Optional: Navbar container spacing */
+.navbar-left, .navbar-right {
+    padding: 0 20px;
+}
+
+/* Navbar items alignments */
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Make sure the carousel items take full height */
+.carousel-item {
+    height: 100vh;
+    background: red;
+    display: flex;
+    align-items: center;  /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    position: relative;
+}
+
+/* Center the text inside */
+
+.carousel-caption {
+    color: white;
+    text-align: center;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.4); /* Adds a slight dark background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Ensuring the text inside is stacked properly */
+.carousel-caption h1,
+.carousel-caption p {
+    display: block; 
+    margin: 10px 0; /* Adds spacing between the elements */
+}
