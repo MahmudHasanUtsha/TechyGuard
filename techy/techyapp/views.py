@@ -3,39 +3,30 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 
-# Views that require login
-@login_required(login_url='/login/')
+# ✅ All pages are now public (no login required)
 def index(request):
     return render(request, 'index.html')
 
-@login_required(login_url='/login/')
 def about(request):
     return render(request, 'about.html')
 
-@login_required(login_url='/login/')
 def services(request):
     return render(request, 'services.html')
 
-@login_required(login_url='/login/')
 def solutions(request):
     return render(request, 'solutions.html')
 
-@login_required(login_url='/login/')
 def clients(request):
     return render(request, 'clients.html')
 
-@login_required(login_url='/login/')
 def partners(request):
     return render(request, 'partners.html')
 
-@login_required(login_url='/login/')
 def gallery(request):
     return render(request, 'gallery.html')
 
-
-# Registration View
+# ✅ Registration View
 def register(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -55,10 +46,10 @@ def register(request):
                 return redirect('login')
         else:
             messages.error(request, "Passwords do not match.")
-    
+
     return render(request, 'register.html')
 
-# Login View
+# ✅ Login View
 def user_login(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -68,15 +59,14 @@ def user_login(request):
         if user is not None:
             login(request, user)
             messages.success(request, "Logged in successfully!")
-            return redirect('index')
+            return redirect('index')  # Redirect to home after login
         else:
             messages.error(request, "Invalid username or password.")
 
     return render(request, 'login.html')
 
-# Logout View
+# ✅ Logout View (Redirect to home after logout)
 def user_logout(request):
     logout(request)
     messages.success(request, "Logged out successfully!")
-    return redirect('login')
-
+    return redirect('index')  # Redirect to home page after logout

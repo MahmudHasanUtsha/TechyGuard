@@ -18,7 +18,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -73,4 +73,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Redirects after login/logout
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/'
