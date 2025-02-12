@@ -6,76 +6,78 @@ Home
 
 {% block content %}
 <!-- Carousel -->
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
   <div class="carousel-inner">
     <!-- Slide 1 -->
-    <div class="carousel-item active" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;">
+    <div class="carousel-item active" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/hello.jpg') no-repeat center center/cover; ">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>ABOUT</h1>
-        <p> Techygaurd  is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology
-          solutions. We aim to drive digital transformation and fortify organizational resilience by offering innovative services that
-          address the evolving challenges of the modern digital landscape.</p>
-        <a href="  {% url 'about' %} " class="btn btn-primary">Learn More</a>
+        <p> Techygaurd is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
+        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
 
     <!-- Slide 2 -->
-    <div class="carousel-item" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;">
+    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/dsa.jpg') no-repeat center center/cover;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>SERVICES</h1>
-        <p>Quickly detect, contain, and mitigate the impact of cyberattacks to minimize disruption and ensure business continuity. Help businesses secure cardholder data by achieving compliance with the Payment Card Industry Data Security Standard
-          (PCI DSS).</p>
-        <a href=" {% url 'services' %} " class="btn btn-primary">Learn More</a>
+        <p>Quickly detect, contain, and mitigate the impact of cyberattacks to ensure business continuity.</p>
+        <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
     
     <!-- Slide 3 -->
-    <div class="carousel-item" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;" >
+    <div class="carousel-item" style="background: url('https://img.freepik.com/premium-photo/solution-businessman-pressing-touch-screen-interface-inscription-solutions-business-concept-internet-concept_161452-10261.jpg?w=1380') no-repeat center center/cover;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>SOLUTIONS</h1>
         <p>Safeguard devices against malware and malicious applications while enabling centralized threat investigation and
           response. Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.</p>
-        <a href=" {% url 'solutions' %} " class="btn btn-primary">Learn More</a>
+        <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
 
+
     <!-- Slide 4 -->
-    <div class="carousel-item" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg') no-repeat center center/cover;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>CLIENTS</h1>
         <p>Explore how Techygaurd  has helped organizations achieve robust cybersecurity through tailored solutions and expert
           support.</p>
-        <a href=" {% url 'clients' %} " class="btn btn-primary">Learn More</a>
+        <a href="{% url 'clients' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
 
+
+
     <!-- Slide 5 -->
-    <div class="carousel-item" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption"  style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg') no-repeat center center/cover;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>PARTNERS</h1>
         <p>We collaborate with industry‐leading OEMs, distributors, and technology providers to deliver reliable and cutting‐edge
           solutions.</p>
-        <a href=" {% url 'partners' %} " class="btn btn-primary">Learn More</a>
+        <a href="{% url 'partners' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
 
+
+
     <!-- Slide 6 -->
-    <div class="carousel-item" style="background: red;">
-      <div class="overlay"></div>
-      <div class="carousel-caption"   style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px;"  >
+    <div class="carousel-item" style="background: url('https://artgallery.yale.edu/sites/default/files/styles/hero_large_x2/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=KlkCSvfh') no-repeat center center/cover;">
+      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
+      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
         <h1>GALLERY</h1>
         <p> Discover highlights from our client meetings, training sessions, and internal events, showcasing our commitment to
           excellence.</p>
-        <a href=" {% url 'gallery' %} " class="btn btn-primary">Learn More</a>
+        <a href="{% url 'gallery' %}" class="btn btn-primary">Learn More</a>
       </div>
     </div>
-  </div>
 
+  </div>
   <!-- Carousel Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
