@@ -5,90 +5,177 @@ Home
 {% endblock %}
 
 {% block content %}
-<!-- Carousel -->
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-  <div class="carousel-inner">
-    <!-- Slide 1 -->
-    <div class="carousel-item active" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/hello.jpg') no-repeat center center/cover; ">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>ABOUT</h1>
-        <p> Techygaurd is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
-        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/dsa.jpg') no-repeat center center/cover;">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>SERVICES</h1>
-        <p>Quickly detect, contain, and mitigate the impact of cyberattacks to ensure business continuity.</p>
-        <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
+<div class="blue" style="color: white; width: 100%; height: 450px; padding: 0px; display: block; overflow: hidden; 
+    background: linear-gradient(rgb(123, 1, 84), rgba(126, 0, 97, 0.603)), 
+                url('https://static.vecteezy.com/system/resources/previews/004/652/447/non_2x/close-up-business-woman-using-calculator-and-laptop-for-do-math-finance-on-wooden-desk-in-office-and-business-working-background-tax-accounting-statistics-and-analytic-research-concept-free-photo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     
-    <!-- Slide 3 -->
-    <div class="carousel-item" style="background: url('https://img.freepik.com/premium-photo/solution-businessman-pressing-touch-screen-interface-inscription-solutions-business-concept-internet-concept_161452-10261.jpg?w=1380') no-repeat center center/cover;">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>SOLUTIONS</h1>
-        <p>Safeguard devices against malware and malicious applications while enabling centralized threat investigation and
-          response. Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.</p>
-        <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
-      </div>
+    <div class="about-text" style="height: 100px; width: 700px; background-color: transparent; font-size: 60px; text-align: left; margin-top: 100px; margin-left: 30px; font-family: tahoma;">
+        <p><b>Techyguard</b></p>
     </div>
-
-
-    <!-- Slide 4 -->
-    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg') no-repeat center center/cover;">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>CLIENTS</h1>
-        <p>Explore how Techygaurd  has helped organizations achieve robust cybersecurity through tailored solutions and expert
-          support.</p>
-        <a href="{% url 'clients' %}" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-
-
-
-    <!-- Slide 5 -->
-    <div class="carousel-item" style="background: url('https://pintecherp.com/wp-content/uploads/2022/12/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg') no-repeat center center/cover;">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>PARTNERS</h1>
-        <p>We collaborate with industry‐leading OEMs, distributors, and technology providers to deliver reliable and cutting‐edge
-          solutions.</p>
-        <a href="{% url 'partners' %}" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-
-
-
-    <!-- Slide 6 -->
-    <div class="carousel-item" style="background: url('https://artgallery.yale.edu/sites/default/files/styles/hero_large_x2/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=KlkCSvfh') no-repeat center center/cover;">
-      <div class="overlay" style="background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></div>
-      <div class="carousel-caption" style="padding-top: 5.15rem; padding-bottom: 7.15rem; width: 896px; height: 490px; position: relative;">
-        <h1>GALLERY</h1>
-        <p> Discover highlights from our client meetings, training sessions, and internal events, showcasing our commitment to
-          excellence.</p>
-        <a href="{% url 'gallery' %}" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-
-  </div>
-  <!-- Carousel Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <div class="about-text2" style="height: 50px; width: 500px; background-color: transparent; font-size: 20px; text-align: left; margin-top: 4px; margin-left: 30px;">
+        <p>A forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
+    </div> 
 </div>
 
+
+
+
+<div class="about" style="background-color: #f3f5f7; width: 100%; height: 400px; margin-top: 100px; margin-bottom: 80px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="text-white" style="width: 50%; height: auto; float: left; padding: 25px 45px 25px 25px;">
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Security Information and Event Management (SIEM)</h3>
+        <h5 style="text-align: justify; color: black;">
+          Aggregate and analyze security data across your IT infrastructure to detect and respond to threats in real-time.
+        </h5>  
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Privileged Access Management (PAM)</h3>  
+        <h5 style="text-align: justify; color: black;">
+          Control and monitor privileged access to critical systems, ensuring only authorized personnel have access.
+        </h5>
+          
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Two-Factor Authentication (2FA)</h3>  
+        <h5 style="text-align: justify; color: black;">
+          Enhance access security with an additional layer of identity verification.
+        </h5>  
+         
+    </div>
+
+    <div class="text-white" style="width: 50%; height: auto; float: left; padding: 25px 45px 25px 25px;">
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Consultancy and Compliance Audits</h3>
+      <h5 style="text-align: justify; color: black;">
+        ISO 27001 Gap Assessments Evaluate your organization's current security practices against ISO 27001 standards to identify areas for improvement.
+
+      </h5>  
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ PCI DSS Compliance Audits</h3>  
+      <h5 style="text-align: justify; color: black;">
+        Conduct thorough gap assessments and audits to ensure adherence to PCI DSS requirements for secure card payment systems.
+      </h5>
+        
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Surveillance Audits </h3>  
+      <h5 style="text-align: justify; color: black;">
+        Perform periodic reviews to confirm ongoing compliance with ISO or PCI standards.
+      </h5>  
+       
+  </div>
+
+</div>
+
+
+
+
+<div class="about" style="background-color: #f894da5d; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 50px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-meet-up.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+    <div style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+        <h1>ABOUT</h1>
+        <h4 style="text-align: justify;">
+          Techygaurd is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.
+        </h4>
+        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+    </div>
+</div>
+
+
+
+
+<div class="about" style="background-color: #fdc0ea5d; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div  style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+        <h1>SERVICES</h1>
+        <h4 style="text-align: justify;">
+          Quickly detect, contain, and mitigate the impact of cyberattacks to ensure business continuity.
+        </h4>
+        <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 50px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden; display: block;">
+            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+    
+</div>
+
+
+
+<div class="about" style="background-color: #f894da5d; width: 100%; height: 450px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 55px 50px 50px 50px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+            <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+
+    <div  style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 40px 50px 50px 50px;">
+        <h1>SOLUTIONS</h1>
+        <h4 style="text-align: justify;">
+          Safeguard devices against malware and malicious applications while enabling centralized threat investigation and
+          response. Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.
+        </h4>
+        <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
+    </div>
+    
+    
+</div>
+
+<div class="about" style="background-color: #fdc0ea5d; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 50px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+          <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-meet-up.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+  <div style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+      <h1>CLIENTS</h1>
+      <h4 style="text-align: justify;">
+        Explore how Techygaurd  has helped organizations achieve robust cybersecurity through tailored solutions and expert
+        support.
+      </h4>
+      <a href="{% url 'clients' %}" class="btn btn-primary">Learn More</a>
+  </div>
+</div>
+
+
+
+
+<div class="about" style="background-color: #f894da5d; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+  <div  style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+      <h1>PARTNERS</h1>
+      <h4 style="text-align: justify;">
+        We collaborate with industry‐leading OEMs, distributors, and technology providers to deliver reliable and cutting‐edge
+        solutions.
+      </h4>
+      <a href="{% url 'partners' %}" class="btn btn-primary">Learn More</a>
+  </div>
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 50px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden; display: block;">
+          <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+  
+</div>
+
+
+
+<div class="about" style="background-color: #fdc0ea5d; width: 100%; height: 450px; display: block; overflow: hidden; font-family: sans-serif;">
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 55px 50px 50px 50px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+          <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+
+  <div  style="color: rgb(97, 3, 73); width: 50%; height: auto; float: left; padding: 40px 50px 50px 50px;">
+      <h1>GALLERY</h1>
+      <h4 style="text-align: justify;">
+        Discover highlights from our client meetings, training sessions, and internal events, showcasing our commitment to
+        excellence.
+      </h4>
+      <a href="{% url 'gallery' %}" class="btn btn-primary">Learn More</a>
+  </div>
+  
+  
+</div>
+
+
+  
 
 
 {% endblock %}
