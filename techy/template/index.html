@@ -6,17 +6,65 @@ Home
 
 {% block content %}
 
-<div class="blue" style="color: white; width: 100%; height: 450px; padding: 0px; display: block; overflow: hidden; 
-    background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
-                url('https://static.vecteezy.com/system/resources/previews/004/652/447/non_2x/close-up-business-woman-using-calculator-and-laptop-for-do-math-finance-on-wooden-desk-in-office-and-business-working-background-tax-accounting-statistics-and-analytic-research-concept-free-photo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
-    <div class="about-text" style="height: 100px; width: 700px; background-color: transparent; font-size: 60px; text-align: left; margin-top: 100px; margin-left: 30px; font-family: tahoma;">
-        <p><b>Techyguard</b></p>
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+<!-- Swiper Slider Container -->
+<div class="swiper mySwiper" style="width: 100%; height: 450px; position: relative; overflow: hidden;">
+    <div class="swiper-wrapper" style="display: flex; height: 100%;">
+        <!-- Slide 1 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://static.vecteezy.com/system/resources/previews/004/652/447/non_2x/close-up-business-woman-using-calculator-and-laptop-for-do-math-finance-on-wooden-desk-in-office-and-business-working-background-tax-accounting-statistics-and-analytic-research-concept-free-photo.jpg'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Techyguard</b></h1>
+                <p style="font-size: 20px; width: 500px;">A forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Secure Your Business</b></h1>
+                <p style="font-size: 20px; width: 500px;">We specialize in cybersecurity, AI, and IoT to enhance business protection and innovation.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://burst.shopifycdn.com/photos/getting-business-finances-in-order.jpg?width=1000&format=pjpg&exif=0&iptc=0'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Innovative AI Solutions</b></h1>
+                <p style="font-size: 20px; width: 500px;">Unlock AI-driven possibilities for automation, security, and business growth.</p>
+            </div>
+        </div>
     </div>
-    <div class="about-text2" style="height: 50px; width: 500px; background-color: transparent; font-size: 20px; text-align: left; margin-top: 4px; margin-left: 30px;">
-        <p>A forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
-    </div> 
+
+    <!-- Pagination & Navigation -->
+    <div class="swiper-pagination" style="position: absolute; bottom: 10px; width: 100%; text-align: center;"></div>
+    <div class="swiper-button-next" style="color: white;"></div>
+    <div class="swiper-button-prev" style="color: white;"></div>
 </div>
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper Initialization -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+  });
+</script>
+
 
 
 
