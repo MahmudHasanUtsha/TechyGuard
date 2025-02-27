@@ -5,7 +5,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xsxw_ck)ln8$gcjwc857gsuwn!e4aiwy%p2i^!2-kpe))&9bsy'
 DEBUG = True
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    'techyguard.com',
+    'www.techyguard.com',  # Add this if using 'www'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -74,3 +79,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Redirects after login/logout
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
