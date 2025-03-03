@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+<!-- Swiper Slider Container -->
+<div class="swiper mySwiper" style="width: 100%; height: 750px; position: relative; overflow: hidden;">
+    <div class="swiper-wrapper" style="display: flex; height: 100%;">
+        <!-- Slide 1 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://static.vecteezy.com/system/resources/previews/004/652/447/non_2x/close-up-business-woman-using-calculator-and-laptop-for-do-math-finance-on-wooden-desk-in-office-and-business-working-background-tax-accounting-statistics-and-analytic-research-concept-free-photo.jpg'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Techyguard</b></h1>
+                <p style="font-size: 20px; width: 500px;">A forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Secure Your Business</b></h1>
+                <p style="font-size: 20px; width: 500px;">We specialize in cybersecurity, AI, and IoT to enhance business protection and innovation.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; 
+            background: linear-gradient(rgb(0, 22, 72), rgba(126, 0, 97, 0.603)), 
+                        url('https://burst.shopifycdn.com/photos/getting-business-finances-in-order.jpg?width=1000&format=pjpg&exif=0&iptc=0'); 
+            background-size: cover; background-position: center;">
+            <div style="margin-left: 70px; color: white;">
+                <h1 style="font-size: 60px; font-family: Tahoma; margin: 0;"><b>Innovative AI Solutions</b></h1>
+                <p style="font-size: 20px; width: 500px;">Unlock AI-driven possibilities for automation, security, and business growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination & Navigation -->
+    <div class="swiper-pagination" style="position: absolute; bottom: 10px; width: 100%; text-align: center;"></div>
+    <div class="swiper-button-next" style="color: white;"></div>
+    <div class="swiper-button-prev" style="color: white;"></div>
+</div>
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper Initialization -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+  });
+</script>
+
+
+
+
+<div class="about" style="background-color: #f3f2f1; width: 1150px; height: 500px; margin: auto; margin-top: 100px; margin-bottom: 60px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="text-white" style="width: 50%; height: auto; float: left; padding: 25px 45px 25px 45px;">
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Security Information and Event Management (SIEM)</h3>
+        <h5 style="text-align: justify; color: black;">
+          Aggregate and analyze security data across your IT infrastructure to detect and respond to threats in real-time.
+        </h5>  
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Privileged Access Management (PAM)</h3>  
+        <h5 style="text-align: justify; color: black;">
+          Control and monitor privileged access to critical systems, ensuring only authorized personnel have access.
+        </h5>
+          
+        <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Two-Factor Authentication (2FA)</h3>  
+        <h5 style="text-align: justify; color: black;">
+          Enhance access security with an additional layer of identity verification.
+        </h5>  
+         
+    </div>
+
+    <div class="text-white" style="width: 50%; height: auto; float: left; padding: 25px 45px 25px 45px;">
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Consultancy and Compliance Audits</h3>
+      <h5 style="text-align: justify; color: black;">
+        ISO 27001 Gap Assessments Evaluate your organization's current security practices against ISO 27001 standards to identify areas for improvement.
+
+      </h5>  
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ PCI DSS Compliance Audits</h3>  
+      <h5 style="text-align: justify; color: black;">
+        Conduct thorough gap assessments and audits to ensure adherence to PCI DSS requirements for secure card payment systems.
+      </h5>
+        
+      <h3 style="color: rgb(97, 3, 73); font-weight: bold;">❖ Surveillance Audits </h3>  
+      <h5 style="text-align: justify; color: black;">
+        Perform periodic reviews to confirm ongoing compliance with ISO or PCI standards.
+      </h5>  
+       
+  </div>
+
+</div>
+
+<!--Graph-->
+<div class="" style="height: 600px; width: 100%;">
+  <div class="" style="height: 600px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+    <img src="../static/image/about1.png" alt="" style="height: 100%; width: 100%; display: block;">
+  </div>  
+</div>
+
+
+<div class="" style="width: 1150px; height: auto; margin: auto; margin-top: 80px;">
+  <div class="about" style="background-color: #f3f2f1; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif; margin-top: 80px;">
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 30px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-meet-up.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+    <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+        <h1>ABOUT</h1>
+        <h4 style="text-align: justify;">
+          Techygaurd is a forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology solutions.
+        </h4>
+        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+    </div>
+</div>
+
+
+
+
+<div class="about" style="background-color: #fff; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 30px;">
+        <h1>SERVICES</h1>
+        <h4 style="text-align: justify;">
+          Quickly detect, contain, and mitigate the impact of cyberattacks to ensure business continuity.
+        </h4>
+        <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 0px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden; display: block;">
+            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+    
+</div>
+
+
+
+<div class="about" style="background-color: #f3f2f1; width: 100%; height: 450px; display: block; overflow: hidden; font-family: sans-serif;">
+    <div class="image" style="width: 50%; height: auto; float: left; padding: 55px 50px 50px 30px;">
+        <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+            <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg" class="img-fluid" alt="Responsive image">
+        </div>        
+    </div>
+
+    <div class="text-black" style="width: 50%; height: auto; float: left; padding: 70px 50px 50px 50px;">
+        <h1>SOLUTIONS</h1>
+        <h4 style="text-align: justify;">
+          Safeguard devices against malware and malicious applications while enabling centralized threat investigation and
+          response. Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.
+        </h4>
+        <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
+    </div>
+    
+    
+</div>
+
+<div class="about" style="background-color: #fff; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+  
+  <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 30px;">
+    <h1>CLIENTS</h1>
+    <h4 style="text-align: justify;">
+      Explore how Techygaurd  has helped organizations achieve robust cybersecurity through tailored solutions and expert
+      support.
+    </h4>
+    <a href="{% url 'clients' %}" class="btn btn-primary">Learn More</a>
+  </div>
+  
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 0px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+          <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-meet-up.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+  
+</div>
+
+
+
+
+<div class="about" style="background-color: #f3f2f1; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
+  
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 30px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden; display: block;">
+          <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+  
+  <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 50px;">
+    <h1>PARTNERS</h1>
+    <h4 style="text-align: justify;">
+      We collaborate with industry‐leading OEMs, distributors, and technology providers to deliver reliable and cutting‐edge
+      solutions.
+    </h4>
+    <a href="{% url 'partners' %}" class="btn btn-primary">Learn More</a>
+  </div>
+
+</div>
+
+
+
+<div class="about" style="background-color: #fff; width: 100%; height: 450px; display: block; overflow: hidden; font-family: sans-serif;">
+  
+  <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 30px;">
+    <h1>GALLERY</h1>
+    <h4 style="text-align: justify;">
+      Discover highlights from our client meetings, training sessions, and internal events, showcasing our commitment to
+      excellence.
+    </h4>
+    <a href="{% url 'gallery' %}" class="btn btn-primary">Learn More</a>
+   
+  </div>
+
+  <div class="image" style="width: 50%; height: auto; float: left; padding: 55px 50px 50px 0px;">
+      <div class="elementor-widget-container" style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
+          <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg" class="img-fluid" alt="Responsive image">
+      </div>        
+  </div>
+
+  
+</div>
+
+
+</div>
+
+
+
+  
+
+
+{% endblock %}

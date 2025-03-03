@@ -10,6 +10,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'techyguard.com',
     'www.techyguard.com',  # Add this if using 'www'
+    '*'
 ]
 
 INSTALLED_APPS = [
