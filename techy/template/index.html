@@ -1,8 +1,34 @@
 {% extends 'base.html' %}
-
 {% block title %}Home{% endblock %}
-
 {% block content %}
+
+<style>
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        background: #f4f4f4;
+    }
+    .about-content {
+        max-width: 800px;
+    }
+    .btn {
+        display: inline-block;
+        background: #6200ea;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #4500b5;
+    }
+</style>
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Include Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
@@ -43,51 +69,6 @@
     <div class="swiper-button-prev"></div>
 </div>
 
-<!-- Include Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-<!-- Swiper Initialization -->
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: { delay: 4000, disableOnInteraction: false },
-      pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-    });
-</script>
-
-<style>
-    .swiper {
-        width: 100%;
-        height: 800px;
-        position: relative;
-    }
-    .slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        font-family: 'Arial', sans-serif;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-    .slide-content {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 600px;
-    }
-    .slide h1 {
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
-    .slide p {
-        font-size: 18px;
-    }
-</style>
-
 <!--Graph-->
 <div class="" style="height: 80%; width: 100%; margin: auto; margin-top: 80px;">
     <div class=""
@@ -120,7 +101,6 @@
         </div>
     </div>
 
-
     <div class="about"
          style="background-color: #fff; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
 
@@ -145,34 +125,48 @@
             <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
         </div>
     </div>
-<br>
+    <br>
 
 </div>
 
+<!-- Swiper Initialization -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+    });
+</script>
 <style>
-    .about-section {
+    .swiper {
+        width: 100%;
+        height: 800px;
+        position: relative;
+    }
+    .slide {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 50px;
-        background: #f4f4f4;
-    }
-    .about-content {
-        max-width: 800px;
-    }
-    .btn {
-        display: inline-block;
-        background: #6200ea;
         color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s;
+        font-family: 'Arial', sans-serif;
+        background-size: cover;
+        background-position: center;
+        position: relative;
     }
-    .btn:hover {
-        background: #4500b5;
+    .slide-content {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+    }
+    .slide h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .slide p {
+        font-size: 18px;
     }
 </style>
-
 {% endblock %}
