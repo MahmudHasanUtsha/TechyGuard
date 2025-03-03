@@ -1,8 +1,77 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
 <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+<!--        margin-top: 50px;-->
+    }
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .section:hover {
+        transform: scale(1.02);
+    }
+    .text-content, .image-container {
+        width: 50%;
+        padding: 50px;
+    }
+    .text-content h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .text-content h5 {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    .btn:hover {
+        background: #0056b3;
+    }
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    @media (max-width: 900px) {
+        .section {
+            flex-direction: column;
+        }
+        .text-content, .image-container {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        .image-container img {
+            width: 90%;
+        }
+    }
     .about-section {
         display: flex;
         align-items: center;
@@ -68,65 +137,55 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
+<br>
 
-<!--Graph-->
-<div class="" style="height: 80%; width: 100%; margin: auto; margin-top: 80px;">
-    <div class=""
-         style="height: 600px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
-        <img src="../static/image/about1.png" alt="" style="height: 100%; width: 100%; display: block;">
-    </div>
-</div>
-
-
-<div class="" style="width: 80%; height: auto; margin: auto; margin-top: 80px;">
-
-    <div class="about"
-         style="background-color: #f3f2f1; width: 100%; height: 450px; display: block; overflow: hidden; font-family: sans-serif;">
-        <div class="text-black" style="width: 50%; height: auto; float: left; padding: 80px 50px 50px 30px;">
+<div class="container">
+    <!-- Services Section -->
+    <div class="section">
+        <div class="text-content">
             <h1>SERVICES</h1>
-            <h5 style="text-align: justify;">
+            <h5>
                 - Software Development <br>
                 - Hardware Purchase (Laptop/Desktop/Router/Firewall etc.) <br>
-                - Security Solution (VAPT) <br>
+                - Security Solution (VAPT)
             </h5>
             <br>
-            <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
+            <a href="{% url 'services' %}" class="btn">Learn More</a>
         </div>
-        <div class="image" style="width: 50%; height: auto; float: left; padding: 50px 50px 50px 0px;">
-            <div class="elementor-widget-container"
-                 style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden; display: block;">
-                <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg"
-                     class="img-fluid" alt="Responsive image">
-            </div>
+        <div class="image-container">
+            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg"
+                 alt="Services Image">
         </div>
     </div>
 
-    <div class="about"
-         style="background-color: #fff; width: 100%; height: 420px; display: block; overflow: hidden; font-family: sans-serif;">
 
-        <div class="image" style="width: 50%; height: auto; float: left; padding: 55px 50px 50px 30px;">
-            <div class="elementor-widget-container"
-                 style="width: 550px; height: 320px; border-radius: 10%; margin: auto; overflow: hidden;">
-                <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg"
-                     class="img-fluid" alt="Responsive image">
-            </div>
+    <!--Graph-->
+    <div class="section">
+        <div class=""
+             style="height: 600px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+            <img src="../static/image/about1.png" alt="" style="height: 100%; width: 100%; display: block;">
         </div>
+    </div>
 
-        <div class="text-black" style="width: 50%; height: auto; float: left; padding: 70px 50px 50px 50px;">
+    <!-- Solutions Section -->
+    <div class="section">
+        <div class="image-container">
+            <img src="https://www.condecosoftware.com/blog/wp-content/uploads/sites/11/2022/12/What-is-the-value-of-working-in-the-office-Condeco-by-Eptura-1536x962.jpg"
+                 alt="Solutions Image">
+        </div>
+        <div class="text-content">
             <h1>SOLUTIONS</h1>
-            <h5 style="text-align: justify;">
+            <h5>
                 - Inventory Management System <br>
                 - Restaurant Management System <br>
                 - POS <br>
                 - Call Center Solution <br>
-                - Custom Service Monitoring System <br>
+                - Custom Service Monitoring System
             </h5>
             <br>
-            <a href="{% url 'solutions' %}" class="btn btn-primary">Learn More</a>
+            <a href="{% url 'solutions' %}" class="btn">Learn More</a>
         </div>
     </div>
-    <br>
-
 </div>
 
 <!-- Swiper Initialization -->
