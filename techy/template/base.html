@@ -60,6 +60,16 @@
     </div>
 </nav>
 
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-container">
+    <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Join WhatsApp Group">
+    </a>
+</div>
+
+
+
 <!-- Main Content Block -->
 <main>
     {% block content %}
@@ -102,6 +112,58 @@
 
 <!-- FontAwesome for Social Media Icons -->
 <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+<!-- CSS -->
+<style>
+    .whatsapp-container {
+        position: fixed; /* Keeps it floating */
+        bottom: 20px;    /* 20px from the bottom initially */
+        right: 20px;     /* 20px from the right */
+        z-index: 1000;   /* Ensures it stays on top of other elements */
+        pointer-events: all; /* Allows interaction with the button */
+        transition: bottom 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .whatsapp-button img {
+        width: 60px;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .whatsapp-button img:hover {
+        transform: scale(1.1);  /* Slight zoom effect on hover */
+    }
+
+    footer {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<!-- JavaScript to Stop Button Before Footer -->
+<script>
+    window.addEventListener('scroll', function () {
+        const footer = document.querySelector('footer');
+        const whatsappButton = document.querySelector('.whatsapp-container');
+
+        // RequestAnimationFrame to make the scroll smoother
+        requestAnimationFrame(function() {
+            // Get the distance of the footer from the top of the viewport
+            const footerRect = footer.getBoundingClientRect();
+            const footerHeight = footer.offsetHeight;
+
+             // Buffer space (before the footer appears)
+            const buffer = 20; // 20px above the footer
+            
+            // If the footer is close to the bottom of the screen, stop the button just above it
+            if (footerRect.top <= window.innerHeight && footerRect.top + footerHeight > window.innerHeight) {
+                whatsappButton.style.bottom = footerHeight + 20 + 'px';  // Push up the button just above the footer
+            } else {
+                whatsappButton.style.bottom = '20px';  // Keep it 20px from the bottom when not near footer
+            }
+        });
+    });
+</script>
 
 
 </body>
