@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock %}
+{% block title %}
+Home
+{% endblock %}
+
+
 {% block content %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
@@ -12,7 +16,7 @@
     .container {
         width: 80%;
         margin: auto;
-        <!-- margin-top: 50px;-->
+         margin-top: 50px;
     }
     .section {
         display: flex;
@@ -107,7 +111,7 @@
     <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide slide"
-             style="background-image: url('https://static.vecteezy.com/system/resources/previews/004/652/447/non_2x/close-up-business-woman-using-calculator-and-laptop-for-do-math-finance-on-wooden-desk-in-office-and-business-working-background-tax-accounting-statistics-and-analytic-research-concept-free-photo.jpg');">
+             style="background-image: url('../static/image/1stimage.jpg');">
             <div class="slide-content">
                 <h1>Techyguard</h1>
                 <p>A forward‐thinking technology company dedicated to empowering businesses with cutting‐edge technology
@@ -117,7 +121,7 @@
 
         <!-- Slide 2 -->
         <div class="swiper-slide slide"
-             style="background-image: url('https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg');">
+             style="background-image: url('../static/image/2ndimage.png');">
             <div class="slide-content">
                 <h1>Secure Your Business</h1>
                 <p>We specialize in cybersecurity, AI, and IoT to enhance business protection and innovation.</p>
@@ -126,7 +130,7 @@
 
         <!-- Slide 3 -->
         <div class="swiper-slide slide"
-             style="background-image: url('https://burst.shopifycdn.com/photos/getting-business-finances-in-order.jpg?width=1000&format=pjpg&exif=0&iptc=0');">
+             style="background-image: url('../static/image/3rdimage.jpg');">
             <div class="slide-content">
                 <h1>Innovative AI Solutions</h1>
                 <p>Unlock AI-driven possibilities for automation, security, and business growth.</p>
@@ -143,19 +147,29 @@
     <!-- Services Section -->
     <div class="section">
         <div class="text-content">
-            <h1>SERVICES</h1>
+            <h1>WebApplication Firewall (WAF)</h1>
             <h5>
-                - Software Development <br>
-                - Hardware Purchase (Laptop/Desktop/Router/Firewall etc.) <br>
-                - Security Solution (VAPT)
+                - Defend web applications from malicious traffic and ensure uninterrupted service delivery.
             </h5>
             <br>
-            <a href="{% url 'services' %}" class="btn">Learn More</a>
+            <h1>Security Information and Event Management (SIEM)</h1>
+            <h5>
+                - Aggregate and analyze security data across your IT infrastructure to detect and respond to
+                threats in real-time.
+            </h5>
         </div>
-        <div class="image-container">
-            <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg"
-                 alt="Services Image">
-        </div>
+        <div class="text-content">
+          <h1>Privileged Access Management (PAM)</h1>
+          <h5>
+              - Control and monitor privileged access to critical systems, ensuring only authorized personnel
+              have access.
+          </h5>
+          <br>
+          <h1>Two-Factor Authentication (2FA)</h1>
+          <h5>
+              - Enhance access security with an additional layer of identity verification.
+          </h5>
+      </div>
     </div>
 
 
@@ -166,6 +180,25 @@
             <img src="../static/image/about1.png" alt="" style="height: 100%; width: 100%; display: block;">
         </div>
     </div>
+
+    <!-- Services Section -->
+    <div class="section">
+      <div class="text-content">
+          <h1>SERVICES</h1>
+          <h5>
+              - Software Development <br>
+              - Hardware Purchase (Laptop/Desktop/Router/Firewall etc.) <br>
+              - Security Solution (VAPT)
+          </h5>
+          <br>
+          <a href="{% url 'services' %}" class="btn">Learn More</a>
+      </div>
+      <div class="image-container">
+          <img src="https://pintecherp.com/wp-content/uploads/2022/12/tech-startup-team-member-meeting.jpg"
+               alt="Services Image">
+      </div>
+    </div>
+
 
     <!-- Solutions Section -->
     <div class="section">
