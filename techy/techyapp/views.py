@@ -14,6 +14,19 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
+def email_services(request):
+    return render(request, 'email_services.html')
+def domain_hosting(request):
+    return render(request, 'domain_hosting.html')
+def website_creation(request):
+    return render(request, 'website_creation.html')
+def software_development(request):
+    return render(request, 'software_development.html')
+def hardware_purchase(request):
+    return render(request, 'hardware_purchase.html')
+def security_solutions(request):
+    return render(request, 'security_solutions.html')
+
 def solutions(request):
     return render(request, 'solutions.html')
 
