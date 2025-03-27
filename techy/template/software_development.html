@@ -1,32 +1,224 @@
 {% extends 'base.html' %}
-
 {% block title %}
-Gallery
+Software Development
 {% endblock %}
 
+
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        /* margin-top: 50px; */
+    }
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .section:hover {
+        transform: scale(1.02);
+    }
+    .text-content, .image-container {
+        width: 100%;
+        padding: 50px;
+    }
+    .text-content h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .text-content h5 {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    .btn:hover {
+        background: #0056b3;
+    }
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    @media (max-width: 900px) {
+        .section {
+            flex-direction: column;
+        }
+        .text-content, .image-container {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        .image-container img {
+            width: 90%;
+        }
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        background: #f4f4f4;
+    }
+    .about-content {
+        max-width: 800px;
+    }
+    .btn {
+        display: inline-block;
+        background: #6200ea;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #4500b5;
+    }
+    .dp {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .dp img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        image-rendering: crisp-edges;
+    }
+</style>
 
-<div class="blue" style="color: rgb(54, 50, 2); width: 100%; height: 300px; padding: 0px; display: block; overflow: hidden; 
-    background: linear-gradient(rgba(204, 194, 7, 0.808), rgba(121, 129, 3, 0.347)), 
-                url('https://artgallery.yale.edu/sites/default/files/styles/hero_large_x2/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=KlkCSvfh'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
-    <div class="clients-text" style="height: 100px; width: 700px; background-color: transparent; margin: auto; font-size: 60px; text-align: center; margin-top: 100px; font-family: tahoma;">
-        <p><b>Gallery</b></p>
+<div class="dp">
+    <img src="../static/image/software.webp" alt="">
+</div>
+
+<div class="container">
+
+    <!--Graph-->
+    <div class="section">
+        <div class=""
+             style="height: 800px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+            <img src="../static/image/graph_email_services.png" alt="" style="height: 100%; width: 100%; display: block;">
+        </div>
     </div>
-    
-</div>
 
+    <!-- Section -->
+    <!--1-->
+    <div class="section">
+      <div class="text-content">
+          <h1 style="text-align: center;">Email Hosting Services</h1>
+          <div class="" style="width: 800px; margin: auto;">
+            <h5 style="text-align: justify; ">
+                <li><span style="font-weight: bold;">Custom Domain Emails:</span> Create professional email addresses (e.g., info@yourcompany.com). <br></li> 
+                <li><span style="font-weight: bold;">Storage Solutions:</span> Offer varying storage capacities for emails and attachments. <br></li>
+                <li><span style="font-weight: bold;">Webmail Access:</span> Allow users to access their emails through a web interface. <br></li>
+                <li><span style="font-weight: bold;">Mobile Access:</span> Enable email access via mobile devices through apps or mobile web. <br></li> 
+            </h5>
+          </div>         
+      </div>
+    </div>
 
+    <!--2-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Email Marketing Services</h1>
+            <div class="" style="width: 800px; margin: auto;">
+            <h5 style="text-align: justify; ">
+                <li><span style="font-weight: bold;">Campaign Management:</span>Tools to create, schedule, and manage email campaigns. <br></li>
+                <li><span style="font-weight: bold;">Templates and Design Tools:</span> Pre-designed templates and drag-and-drop editors for easy email creation. <br></li>
+                <li><span style="font-weight: bold;">Segmentation and Targeting:</span> Ability to segment audiences for targeted campaigns. <br></li>
+                <li><span style="font-weight: bold;">Analytics and Reporting:</span> Track open rates, click-through rates, and conversions to measure campaign success. <br></li>
+            </h5>
+            </div>                  
+        </div>
+    </div>
 
+    <!--3-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Email Security Services</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <li><span style="font-weight: bold;">Spam Filtering:</span> Advanced filters to block unwanted and malicious emails.<br></li> 
+                  <li><span style="font-weight: bold;">Encryption:</span> Secure email encryption to protect data in transit. <br></li>
+                  <li><span style="font-weight: bold;">Phishing Protection:</span> Tools to detect and prevent phishing attacks. <br></li>
+                  <li><span style="font-weight: bold;">Compliance Solutions:</span> Ensure adherence to regulations like GDPR and HIPAA. <br></li> 
+              </h5>
+            </div>         
+        </div>
+    </div>
 
+    <!--4-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Collaboration Tools</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <li><span style="font-weight: bold;">Shared Mailboxes:</span> Allow multiple users to access and manage a single email account. <br></li> 
+                  <li><span style="font-weight: bold;">Calendar Integration:</span> Sync email with calendar applications for scheduling meetings. <br></li>
+                  <li><span style="font-weight: bold;">Task Management:</span> Tools to create and assign tasks directly from emails. <br></li>
+                  <li><span style="font-weight: bold;">File Sharing:</span> Integrate cloud storage solutions for easy file sharing within emails. <br></li> 
+              </h5>
+            </div>         
+        </div>
+    </div>
 
-<div class="elementor-widget-container" style="background-color: transparent; text-align: center; margin-top: 50px;">
-    <p style="font-size: 50px; color: rgb(54, 50, 2); text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); font-weight: bold;">Take a look </p>
-</div>
+    <!--5-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Customer Support Services</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <li><span style="font-weight: bold;">Support Ticketing Systems:</span> Convert emails into support tickets for better tracking and resolution. <br></li> 
+                  <li><span style="font-weight: bold;">Automated Responses:</span> Set up auto-replies for common inquiries. <br></li>
+                  <li><span style="font-weight: bold;">Feedback Collection:</span> Use email surveys to gather customer feedback and improve services. <br></li>
+              </h5>
+            </div>         
+        </div>
+    </div>
 
-<div class="elementor-widget-container" style="background-color: transparent; text-align: center; margin-top: 20px; padding: 0px 20px 0px 20px;">
-    <p style="font-size: 20px;">Discover highlights from our client meetings, training sessions, and internal events <br> showcasing our commitment to excellence.</p>
-</div>
+    <!--6-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Migration Services</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <li><span style="font-weight: bold;">Data Migration:</span> Transfer existing emails, contacts, and calendars to the new platform. <br></li> 
+                  <li><span style="font-weight: bold;">Setup and Configuration:</span> Assist with setting up new accounts and configurations. <br></li>
+                  <li><span style="font-weight: bold;">Training and Support:</span> Provide training for employees on the new email system. <br></li>
+              </h5>
+            </div>         
+        </div>
+    </div>
 
 
 {% endblock %}

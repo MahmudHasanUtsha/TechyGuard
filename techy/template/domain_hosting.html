@@ -1,32 +1,263 @@
 {% extends 'base.html' %}
-
 {% block title %}
-Gallery
+Domain Hosting
 {% endblock %}
 
+
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        /* margin-top: 50px; */
+    }
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .section:hover {
+        transform: scale(1.02);
+    }
+    .text-content, .image-container {
+        width: 100%;
+        padding: 50px;
+    }
+    .text-content h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .text-content h5 {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    .btn:hover {
+        background: #0056b3;
+    }
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    @media (max-width: 900px) {
+        .section {
+            flex-direction: column;
+        }
+        .text-content, .image-container {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        .image-container img {
+            width: 90%;
+        }
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        background: #f4f4f4;
+    }
+    .about-content {
+        max-width: 800px;
+    }
+    .btn {
+        display: inline-block;
+        background: #6200ea;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #4500b5;
+    }
+    .dp {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .dp img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        image-rendering: crisp-edges;
+    }
+</style>
 
-<div class="blue" style="color: rgb(54, 50, 2); width: 100%; height: 300px; padding: 0px; display: block; overflow: hidden; 
-    background: linear-gradient(rgba(204, 194, 7, 0.808), rgba(121, 129, 3, 0.347)), 
-                url('https://artgallery.yale.edu/sites/default/files/styles/hero_large_x2/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=KlkCSvfh'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
-    <div class="clients-text" style="height: 100px; width: 700px; background-color: transparent; margin: auto; font-size: 60px; text-align: center; margin-top: 100px; font-family: tahoma;">
-        <p><b>Gallery</b></p>
+<div class="dp">
+    <img src="../static/image/domain.webp" alt="">
+</div>
+
+<div class="container">
+
+    <!--Graph-->
+    <div class="section">
+        <div class=""
+             style="height: 800px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+            <img src="../static/image/graph_domain_1.png" alt="" style="height: 100%; width: 100%; display: block;">
+        </div>
     </div>
+
+    <!-- Section -->
+    <!--1-->
+    <div class="section">
+      <div class="text-content">
+          <h1 style="text-align: center;">Shared Hosting</h1>
+          <div class="" style="width: 800px; margin: auto;">
+            <h5 style="text-align: justify; ">
+                This is the most cost-effective option, where multiple websites share a single server's resources.
+                 It's ideal for startups and small businesses with limited traffic.
+            </h5>
+          </div>         
+      </div>
+    </div>
+
+    <!--2-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">VPS Hosting</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                Virtual Private Server (VPS) hosting provides more resources and greater control compared to shared hosting. 
+                It is suitable for growing companies that require more power and flexibility.
+              </h5>
+            </div>         
+        </div>
+    </div>
+
+    <!--3-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Dedicated Hosting</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                In this model, a single server is dedicated to one client, offering maximum performance and security. 
+                This is ideal for large enterprises with high traffic and specific hosting needs.
+              </h5>
+            </div>         
+        </div>
+    </div>
+
+    <!--4-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Cloud Hosting</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                his service utilizes multiple servers to host websites, providing scalability and reliability. 
+                It's perfect for software companies that anticipate fluctuating traffic levels.
+              </h5>
+            </div>         
+        </div>
+    </div>
+
+    <!--5-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Managed Hosting</h1>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                This option includes server management and maintenance, allowing software companies to focus on their core business 
+                while the hosting provider handles technical aspects.
+              </h5>
+            </div>         
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+        <!--Graph-->
+        <div class="section">
+            <div class=""
+                 style="height: 600px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+                <img src="../static/image/graph_domain_2.png" alt="" style="height: 100%; width: 100%; display: block;">
+            </div>
+        </div>
     
+        <!-- Section -->
+        <!--i-->
+        <div class="section">
+          <div class="text-content">
+              <h1 style="text-align: center;">Bundled Services</h1>
+              <div class="" style="width: 800px; margin: auto;">
+                <h5 style="text-align: justify; ">
+                    Combine domain hosting with software products to provide a comprehensive solution for clients. 
+                    This can increase customer retention and satisfaction.
+                </h5>
+              </div>         
+          </div>
+        </div>
+    
+        <!--ii-->
+        <div class="section">
+            <div class="text-content">
+                <h1 style="text-align: center;">White Label Solutions</h1>
+                <div class="" style="width: 800px; margin: auto;">
+                  <h5 style="text-align: justify; ">
+                    Offer domain hosting under the company’s brand, 
+                    allowing clients to manage their domains without needing to understand the technical details.
+                  </h5>
+                </div>         
+            </div>
+        </div>
+    
+        <!--iii-->
+        <div class="section">
+            <div class="text-content">
+                <h1 style="text-align: center;">Support and Maintenance</h1>
+                <div class="" style="width: 800px; margin: auto;">
+                  <h5 style="text-align: justify; ">
+                    Provide ongoing support for domain management, ensuring clients have assistance whenever they encounter issues.
+                  </h5>
+                </div>         
+            </div>
+        </div>
+    
+        <!--iv-->
+        <div class="section">
+            <div class="text-content">
+                <h1 style="text-align: center;">Custom Solutions</h1>
+                <div class="" style="width: 800px; margin: auto;">
+                  <h5 style="text-align: justify; ">
+                    Tailor hosting packages to meet the specific needs of different clients, enhancing the value proposition.
+                  </h5>
+                </div>         
+            </div>
+        </div>
 </div>
-
-
-
-
-
-<div class="elementor-widget-container" style="background-color: transparent; text-align: center; margin-top: 50px;">
-    <p style="font-size: 50px; color: rgb(54, 50, 2); text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); font-weight: bold;">Take a look </p>
-</div>
-
-<div class="elementor-widget-container" style="background-color: transparent; text-align: center; margin-top: 20px; padding: 0px 20px 0px 20px;">
-    <p style="font-size: 20px;">Discover highlights from our client meetings, training sessions, and internal events <br> showcasing our commitment to excellence.</p>
-</div>
-
 
 {% endblock %}
