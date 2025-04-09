@@ -5,78 +5,248 @@ Solutions
 {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        /* margin-top: 50px; */
+    }
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .section:hover {
+        transform: scale(1.02);
+    }
+    .text-content, .image-container {
+        width: 100%;
+        padding: 50px;
+    }
+    .text-content h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .text-content h5 {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    .btn:hover {
+        background: #0056b3;
+    }
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    @media (max-width: 900px) {
+        .section {
+            flex-direction: column;
+        }
+        .text-content, .image-container {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        .image-container img {
+            width: 90%;
+        }
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        background: #f4f4f4;
+    }
+    .about-content {
+        max-width: 800px;
+    }
+    .btn {
+        display: inline-block;
+        background: #6200ea;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #4500b5;
+    }
+    .dp {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .dp img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        image-rendering: crisp-edges;
+    }
+</style>
 
-<div class="blue" style="color: white; width: 100%; height: 300px; padding: 0px; display: block; overflow: hidden; 
-    background: linear-gradient(rgba(77, 52, 14, 0.756), rgba(103, 103, 121, 0.884)), 
-                url('https://pintecherp.com/wp-content/uploads/2024/10/email-anti.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
-    <div class="solutions-text" style="height: 100px; width: 700px; background-color: transparent; margin: auto; font-size: 60px; text-align: center; margin-top: 50px; font-family: tahoma;">
-        <p><b>Solutions</b></p>
-    </div>
-    <div class="solutions-text2" style="height: 50px; width: 1200px; background-color: transparent; margin: auto; font-size: 20px; text-align: center; margin-top: 4px;">
-        <p>If you have a business, we have a solution for you!</p>
-    </div> 
+<div class="dp">
+    <img src="../static/image/solutions.webp" alt="">
 </div>
-
 
 <div class="elementor-widget-container" style="background-color: transparent; text-align: center; margin-top: 50px;">
     <p style="font-size: 50px; color: #020a5ec4; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); font-weight: bold;">Our Solutions</p>
 </div>
 
+<div class="container">
 
-
-
-<div style="display: flex; justify-content: space-between; gap: 20px; padding: 20px;">
-    <div class="elementor-widget-container" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #333; font-size: 24px;">Widget 1</h2>
-        <p style="color: #555;">This is the first widget with custom inline styles.</p>
+    <!--Graph-->
+    <div class="section">
+        <div class=""
+             style="height: 800px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
+            <img src="../static/image/graph_solutions.png" alt="" style="height: 100%; width: 100%; display: block;">
+        </div>
     </div>
-    
-    <div class="elementor-widget-container" style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #007bff; font-size: 24px;">Widget 2</h2>
-        <p style="color: #0056b3;">This is the second widget with a blue theme.</p>
+
+    <!-- Section -->
+    <!--1-->
+    <div class="section">
+      <div class="text-content">
+          <h1 style="text-align: center;">Inventory Management System</h1>
+          <h5 style="text-align: justify;">
+            An Inventory Management System (IMS) is crucial for businesses that need to track inventory levels, orders, sales, 
+            and deliveries. This system helps in managing stock across multiple locations, 
+            automating reordering processes, and providing real-time insights into inventory status. 
+          </h5>
+          <div class="" style="width: 800px; margin: auto;">
+            <h5 style="text-align: justify; ">
+                <p style="font-weight: bold;">
+                    Key features include:
+                </p>
+                <li>Real-time inventory tracking <br></li> 
+                <li>Automated stock alerts and reordering <br></li>
+                <li>Reporting and analytics for inventory performance <br></li> 
+                <li>Integration with e-commerce platforms and accounting software<br></li>
+            </h5>
+          </div>         
+      </div>
     </div>
-    
-    <div class="elementor-widget-container" style="background-color: #fff3cd; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #856404; font-size: 24px;">Widget 3</h2>
-        <p style="color: #6c5404;">This widget has a warning-style background.</p>
+
+    <!--2-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Restaurant Management System</h1>
+            <h5>
+                A Restaurant Management System (RMS) is designed to streamline operations in the food service industry. 
+                This system manages reservations, orders, and payments while enhancing customer service.
+            </h5>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <p style="font-weight: bold;">
+                    Key features include:
+                  </p>
+                  <li>Table management and reservation systems <br></li> 
+                  <li>Menu management and order processing <br></li>
+                  <li>Payment processing and billing <br></li> 
+                  <li>Customer relationship management (CRM) tools<br></li>
+              </h5>
+            </div>         
+        </div>
     </div>
-    
-    <div class="elementor-widget-container" style="background-color: #d4edda; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #155724; font-size: 24px;">Widget 4</h2>
-        <p style="color: #0b2e13;">This widget follows a green success theme.</p>
+  
+    <!--3-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Point Of Sales (POS)</h1>
+            <h5>
+                A Point of Sales (POS) system is essential for retail and hospitality businesses, allowing them to process transactions efficiently. 
+                This system integrates sales, inventory, and customer data to provide a seamless checkout experience.
+            </h5>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <p style="font-weight: bold;">
+                    Key features include:
+                  </p>
+                  <li>Fast and secure transaction processing <br></li> 
+                  <li>Inventory management integration <br></li>
+                  <li>Customer loyalty programs <br></li>
+                  <li>Sales reporting and analytics<br></li>
+              </h5>
+            </div>         
+        </div>
     </div>
-</div>
-
-
-<div class="solutions" style="background-color: #f3f2f1; width: 1150px; height: 400px; margin: auto; display: block; overflow: hidden;">
-    <div class="image" style="width: 40%; height: 500px; float: left; padding: 80px 50px 40px 50px;">
-        <div class="elementor-widget-container" style="width: 400px; height: 200px; margin: auto; overflow: hidden;">
-            <img src="https://img.freepik.com/premium-photo/solution-businessman-pressing-touch-screen-interface-inscription-solutions-business-concept-internet-concept_161452-10261.jpg?w=1380" class="img-fluid" alt="Responsive image">
-        </div>        
+  
+    <!--4-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Call Center Solution</h1>
+            <h5>
+                A Call Center Solution is vital for businesses that rely on customer support and communication. 
+                This system enhances customer interactions through various channels, including voice, chat, and email.
+            </h5>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <p style="font-weight: bold;">
+                    Key features include:
+                  </p>
+                  <li>Multi-channel communication support <br></li> 
+                  <li>Call routing and queuing <br></li>
+                  <li>Performance analytics and reporting <br></li>
+                  <li>Integration with CRM systems <br></li>
+              </h5>
+            </div>         
+        </div>
     </div>
-    <div class="text-black" style="width: 60%; height: auto; float: left; padding: 25px 20px 25px 20px;">
-        <h5><b>Solutions</b></h5>
-        <p>Safeguard devices against malware and malicious applications while enabling centralized threat investigation 
-            and response. Protect server data and resources with multi-layered security measures to prevent intrusions 
-            and hacking attempts. Shield email communication against unauthorized access, phishing attacks, and data loss.
-            Implement reliable data backup systems for local, cloud, or hybrid environments to ensure disaster recovery.
-            Defend web applications from malicious traffic and ensure uninterrupted service delivery.Control and monitor 
-            privileged access to critical systems, ensuring only authorized personnel have access. Enhance access security 
-            with an additional layer of identity verification. Conduct thorough gap assessments and audits to ensure adherence 
-            to PCI DSS requirements for secure card payment systems. Perform periodic reviews to confirm ongoing compliance with 
-            ISO or PCI standards.Train teams to implement, audit, and manage an ISMS aligned with ISO 27001 standards. Train 
-            teams to implement, audit, and manage an ISMS aligned with ISO 27001 standards.</p>
+  
+
+    <!--5-->
+    <div class="section">
+        <div class="text-content">
+            <h1 style="text-align: center;">Custom Service Monitoring System</h1>
+            <h5>
+                A Custom Service Monitoring System allows businesses to track and analyze service performance tailored to their specific needs. 
+                This system helps in identifying areas for improvement and ensuring service quality. 
+            </h5>
+            <div class="" style="width: 800px; margin: auto;">
+              <h5 style="text-align: justify; ">
+                  <p style="font-weight: bold;">
+                    Key features include:
+                  </p>
+                  <li>Customizable monitoring metrics <br></li> 
+                  <li>Real-time performance dashboards <br></li>
+                  <li>Automated alerts for service issues <br></li>
+                  <li>Comprehensive reporting capabilities <br></li>
+              </h5>
+            </div>         
+        </div>
     </div>
-</div>
 
-
-
-
-<div class="" style="height: 900px; width: 100%; margin-top: 80px;">
-    <div class="" style="height: 800px; width: 900px; margin: auto; background-position: center; background-repeat: no-repeat;">
-      <img src="../static/image/solutions.png" alt="" style="height: 100%; width: 100%; display: block;">
-    </div>  
-</div>
 
 {% endblock %}
